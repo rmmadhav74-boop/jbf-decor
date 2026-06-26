@@ -4,7 +4,7 @@ import TrustBar from "../components/TrustBar/TrustBar";
 import CategorySection from "../components/CategorySection/CategorySection";
 import FeaturedCollection from "../components/FeaturedCollection/FeaturedCollection";
 import WhyChooseUs from "../components/WhyChooseUs/WhyChooseUs";
-import ProjectGallery from "../components/ProjectGallery/ProjectGallery";
+import ShowcaseSection from "../components/ShowcaseSection/ShowcaseSection";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Process from "../components/Process/Process";
 import ProductCollections from "../components/ProductCollections/ProductCollections";
@@ -13,6 +13,7 @@ import DesignIdeas from "../components/DesignIdeas/DesignIdeas";
 import Awards from "../components/Awards/Awards";
 import FAQ from "../components/FAQ/FAQ";
 import CTABanner from "../components/CTA/CTABanner";
+
 
 /* ─── Page transition variants ─── */
 const pageVariants = {
@@ -44,8 +45,8 @@ export default function Home() {
       {/* 5 — Why Choose JBF */}
       <WhyChooseUs />
 
-      {/* 6 — Project Gallery */}
-      <ProjectGallery />
+      {/* 6 — Project Showcase (client portfolio) */}
+      <ShowcaseSection />
 
       {/* 7 — Testimonials */}
       <Testimonials />

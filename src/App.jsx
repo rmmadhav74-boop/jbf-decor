@@ -37,7 +37,7 @@ function LoadingSpinner() {
 function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/919999999999?text=Hello%20JBF%20Decor!%20I'm%20interested%20in%20your%20furniture."
+      href="https://wa.me/917597710533?text=Hello%20JBF%20Decor!%20I'm%20interested%20in%20your%20furniture."
       target="_blank"
       rel="noopener noreferrer"
       id="floating-whatsapp"

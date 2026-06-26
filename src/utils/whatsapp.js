@@ -1,7 +1,7 @@
 // ─── WhatsApp Utility ───
 // Generates a pre-filled WhatsApp message URL for a product enquiry
 
-const WHATSAPP_NUMBER = "919999999999"; // Replace with actual JBF Decor WhatsApp number
+const WHATSAPP_NUMBER = "917597710533"; // JBF Decor WhatsApp
 
 /**
  * Generate a WhatsApp enquiry link for a product

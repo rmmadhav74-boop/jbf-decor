@@ -8,7 +8,7 @@ export const testimonials = [
     rating: 5,
     quote:
       "JBF Decor completely transformed our 3BHK into a luxury home. The craftsmanship is unmatched and the team was incredibly professional throughout the entire process. Worth every rupee!",
-    image: "/images/testimonials/customer-review-1.jpg",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
     project: "Full Home Interior",
     date: "March 2025",
   },
@@ -19,7 +19,7 @@ export const testimonials = [
     rating: 5,
     quote:
       "We ordered a custom bedroom set and the quality exceeded all our expectations. The delivery was on time and the installation team was extremely neat and professional.",
-    image: "/images/testimonials/customer-review-2.jpg",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
     project: "Master Bedroom",
     date: "January 2025",
   },
@@ -30,7 +30,7 @@ export const testimonials = [
     rating: 5,
     quote:
       "The living room furniture from JBF Decor is simply stunning. Everyone who visits our home asks about it. The sofa quality is incredible and the customer service was top-notch.",
-    image: "/images/testimonials/customer-review-3.jpg",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200",
     project: "Living Room Makeover",
     date: "April 2025",
   },
@@ -41,7 +41,7 @@ export const testimonials = [
     rating: 4,
     quote:
       "Got our entire office done by JBF Decor. The team was responsive, the designs were modern and ergonomic, and the project was completed ahead of schedule. Highly recommend!",
-    image: "/images/testimonials/customer-review-4.jpg",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
     project: "Office Interior",
     date: "February 2025",
   },
@@ -52,7 +52,7 @@ export const testimonials = [
     rating: 5,
     quote:
       "JBF Decor's factory-direct pricing is unbeatable. We saved nearly 40% compared to retail and the quality is actually superior. The customization options are fantastic.",
-    image: "/images/testimonials/customer-review-5.jpg",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200",
     project: "Dining Room & Kitchen",
     date: "May 2025",
   },
@@ -65,7 +65,7 @@ export const projects = [
     title: "Modern 4BHK Penthouse",
     location: "South Mumbai",
     category: "Full Home",
-    image: "/images/projects/project-01.jpg",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=900",
     featured: true,
   },
   {
@@ -73,7 +73,7 @@ export const projects = [
     title: "Contemporary Bedroom Suite",
     location: "Bandra, Mumbai",
     category: "Bedroom",
-    image: "/images/projects/project-02.jpg",
+    image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=900",
     featured: true,
   },
   {
@@ -81,7 +81,7 @@ export const projects = [
     title: "Luxury Living Room",
     location: "Gurgaon, Delhi NCR",
     category: "Living Room",
-    image: "/images/projects/project-03.jpg",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=900",
     featured: true,
   },
   {
@@ -89,7 +89,7 @@ export const projects = [
     title: "Minimal Kitchen Design",
     location: "Bengaluru",
     category: "Kitchen",
-    image: "/images/projects/project-04.jpg",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=900",
     featured: false,
   },
   {
@@ -97,7 +97,7 @@ export const projects = [
     title: "Executive Office Space",
     location: "Hyderabad",
     category: "Office",
-    image: "/images/projects/project-05.jpg",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=900",
     featured: false,
   },
   {
@@ -105,7 +105,7 @@ export const projects = [
     title: "Classic Dining Experience",
     location: "Pune",
     category: "Dining",
-    image: "/images/projects/project-06.jpg",
+    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=900",
     featured: false,
   },
 ];
@@ -119,7 +119,7 @@ export const designIdeas = [
     author: "Priyanka Arora",
     date: "June 10, 2025",
     readTime: "5 min read",
-    image: "/images/blog/blog-living-room-tips.jpg",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=700",
     excerpt:
       "Transform your living space with these expert interior design secrets that make any room feel like a luxury hotel suite.",
   },
@@ -130,7 +130,7 @@ export const designIdeas = [
     author: "Arjun Malhotra",
     date: "May 22, 2025",
     readTime: "7 min read",
-    image: "/images/blog/blog-bedroom-guide.jpg",
+    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=700",
     excerpt:
       "Choosing the right bedroom furniture is more than aesthetics — it's about creating a sanctuary that supports your wellbeing.",
   },
@@ -141,7 +141,7 @@ export const designIdeas = [
     author: "Neha Kapoor",
     date: "June 2, 2025",
     readTime: "4 min read",
-    image: "/images/blog/blog-dining-trends.jpg",
+    image: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&q=80&w=700",
     excerpt:
       "From marble inlay tables to sculptural chairs, discover the dining room design trends that are redefining home entertaining.",
   },

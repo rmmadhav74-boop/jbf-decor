@@ -196,3 +196,80 @@
   overflow: hidden;
   transition: max-height 0.4s ease, opacity 0.3s ease;
 }
+
+/* ─── Global Responsive Fixes ─── */
+
+/* Fluid typography base */
+html {
+  font-size: clamp(14px, 1.5vw, 16px);
+}
+
+/* Prevent horizontal overflow everywhere */
+*, *::before, *::after {
+  max-width: 100%;
+}
+
+/* Touch-friendly tap targets on mobile */
+@media (max-width: 640px) {
+  button, a {
+    min-height: 40px;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary, .btn-outline, .btn-outline-accent, .btn-whatsapp {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet refinements */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .section-title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+  }
+}
+
+/* Desktop large screens */
+@media (min-width: 1440px) {
+  .max-w-\[1440px\] {
+    max-width: 1440px;
+  }
+}
+
+/* Image lazy-load fade-in */
+img {
+  transition: opacity 0.3s ease;
+}
+img[loading="lazy"] {
+  opacity: 0;
+}
+img[loading="lazy"].loaded,
+img:not([loading]) {
+  opacity: 1;
+}
+
+/* Smooth scroll sections */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid #EB595F;
+  outline-offset: 2px;
+}
+
+/* Select option dark background fix */
+select option {
+  background: #1a1a1a;
+  color: white;
+}
+

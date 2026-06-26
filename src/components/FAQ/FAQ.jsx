@@ -86,7 +86,7 @@ export default function FAQ() {
             {/* CTA */}
             <div className="space-y-3">
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/917597710533"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"
@@ -109,7 +109,7 @@ export default function FAQ() {
                 Book a free home consultation and let our experts guide you through the entire process.
               </p>
               <a
-                href="https://wa.me/919999999999?text=I'd%20like%20to%20book%20a%20free%20consultation"
+                href="https://wa.me/917597710533?text=I'd%20like%20to%20book%20a%20free%20consultation"
                 className="inline-block mt-4 px-5 py-2.5 rounded-full bg-accent text-white text-sm font-semibold hover:bg-accent-dark transition-colors"
               >
                 Book Free Visit →

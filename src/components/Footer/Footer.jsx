@@ -189,7 +189,7 @@ export default function Footer() {
 
             {/* WhatsApp button */}
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/917597710533"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] text-white text-sm font-semibold hover:bg-[#1fb855] transition-colors"
