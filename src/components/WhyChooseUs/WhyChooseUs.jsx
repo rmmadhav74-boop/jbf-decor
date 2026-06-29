@@ -7,6 +7,7 @@ import {
   Wrench,
   Shield,
   Truck,
+  Leaf,
 } from "lucide-react";
 
 const features = [
@@ -58,6 +59,13 @@ const features = [
     description:
       "White-glove delivery across all major cities in India — at absolutely no extra charge.",
     color: "from-pink-500/20 to-rose-500/20",
+  },
+  {
+    icon: Leaf,
+    title: "Eco-Friendly",
+    description:
+      "Sustainably sourced materials and green manufacturing practices for a better tomorrow.",
+    color: "from-lime-500/20 to-green-500/20",
   },
 ];
 
@@ -132,7 +140,7 @@ export default function WhyChooseUs() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, i) => (
             <FeatureCard key={feature.title} feature={feature} index={i} />
           ))}
