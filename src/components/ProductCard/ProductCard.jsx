@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Heart, MessageCircle, Eye } from "lucide-react";
+import { Heart, Star, MessageCircle, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import { generateWhatsAppLink } from "../../utils/whatsapp";
 
 /* ─── ProductCard Component ─── */
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, hidePrice = false }) {
   const [wishlist, setWishlist] = useState(false);
 
   const whatsappLink = generateWhatsAppLink(
     product.name,
-    product.category
+    product.category,
+    !hidePrice ? product.priceDisplay : undefined
   );
 
   return (
@@ -92,16 +93,65 @@ export default function ProductCard({ product }) {
           {product.description}
         </p>
 
-        {/* Enquire Button */}
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full btn-whatsapp justify-center py-2.5 text-sm mt-auto"
-        >
-          <MessageCircle size={14} />
-          Enquire on WhatsApp
-        </a>
+        {!hidePrice ? (
+          <>
+            {/* Rating */}
+            <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    size={13}
+                    className={i < Math.round(product.rating) ? "text-accent fill-accent" : "text-gray-200 fill-gray-200"}
+                  />
+                ))}
+              </div>
+              <span className="text-xs text-muted-text">({product.reviews})</span>
+            </div>
+
+            {/* Price */}
+            <div className="flex items-center justify-between mb-5">
+              <div>
+                <span className="font-heading font-bold text-2xl text-primary">
+                  {product.priceDisplay}
+                </span>
+                <span className="text-muted-text text-xs ml-2">onwards</span>
+              </div>
+              <span className="text-xs text-green-600 font-medium bg-green-50 px-2 py-1 rounded-full">
+                {product.inStock ? "In Stock" : "On Order"}
+              </span>
+            </div>
+
+            {/* Actions */}
+            <div className="flex gap-2 mt-auto">
+              <Link
+                to={`/product/${product.id}`}
+                className="flex-1 btn-outline-accent text-center justify-center py-2.5 text-sm flex items-center"
+              >
+                View Details
+              </Link>
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 btn-whatsapp justify-center py-2.5 text-sm flex items-center"
+              >
+                <MessageCircle size={14} className="mr-1" />
+                Enquire
+              </a>
+            </div>
+          </>
+        ) : (
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full btn-whatsapp justify-center py-2.5 text-sm mt-auto flex items-center"
+          >
+            <MessageCircle size={14} className="mr-1" />
+            Enquire on WhatsApp
+          </a>
+        )}
       </div>
     </motion.div>
   );

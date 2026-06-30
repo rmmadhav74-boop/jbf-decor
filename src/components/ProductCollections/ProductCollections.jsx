@@ -72,7 +72,7 @@ export default function ProductCollections() {
           >
             {products.length > 0 ? (
               products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard key={product.id} product={product} hidePrice={true} />
               ))
             ) : (
               <div className="col-span-full text-center py-20">
