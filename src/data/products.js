@@ -449,10 +449,10 @@ export const products = [
 
 // ── Collections (for tab-filtered product grid) ──
 export const collections = {
-  Modern: products.filter((p) => p.style === "Modern"),
-  Minimal: products.filter((p) => p.style === "Minimal"),
-  Classic: products.filter((p) => p.style === "Classic"),
-  Industrial: products.filter((p) => p.style === "Industrial"),
+  Modern: products.filter((p) => p.style === "Modern").slice(0, 4),
+  Minimal: products.filter((p) => p.style === "Minimal").slice(0, 4),
+  Classic: products.filter((p) => p.style === "Classic").slice(0, 4),
+  Industrial: products.filter((p) => p.style === "Industrial").slice(0, 4),
 };
 
 // ── Featured products (15) ──

@@ -93,16 +93,7 @@ const showcaseProjects = [
     image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&q=80&w=1200",
     accent: "#EB595F",
   },
-  {
-    id: "s-10",
-    title: "Penthouse Terrace Garden",
-    subtitle: "Outdoor Living",
-    location: "Noida, Delhi NCR",
-    category: "Outdoor",
-    budget: "₹11L",
-    image: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&q=80&w=1200",
-    accent: "#9333ea",
-  },
+
 ];
 
 /* ── Lightbox ── */
