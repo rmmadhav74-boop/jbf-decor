@@ -12,7 +12,7 @@ export default function ProductCollections() {
   const products = collections[activeTab] || [];
 
   return (
-    <section className="py-24 bg-white">
+    <section id="shop-by-style" className="py-24 bg-white scroll-mt-32">
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12">
         {/* Header */}
         <motion.div
@@ -85,16 +85,6 @@ export default function ProductCollections() {
         </AnimatePresence>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Link to="/catalog" className="btn-outline-accent">
-            Browse All Collections <ArrowRight size={16} />
-          </Link>
-        </motion.div>
       </div>
     </section>
   );

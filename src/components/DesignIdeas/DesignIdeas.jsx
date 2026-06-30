@@ -87,7 +87,7 @@ function getGradient(i) {
 /* ─── Section ─── */
 export default function DesignIdeas() {
   return (
-    <section className="py-24 bg-light-gray">
+    <section id="magazine" className="py-24 bg-light-gray scroll-mt-32">
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -102,15 +102,6 @@ export default function DesignIdeas() {
               <span className="block italic text-accent">Ideas & Trends</span>
             </h2>
             <div className="accent-divider mt-2" />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <Link to="#" className="btn-outline-accent">
-              View All Articles <ArrowRight size={16} />
-            </Link>
           </motion.div>
         </div>
 

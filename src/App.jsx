@@ -8,8 +8,6 @@ import Footer from "./components/Footer/Footer";
 const Home = lazy(() => import("./pages/Home"));
 const Catalog = lazy(() => import("./pages/Catalog"));
 const ProductDetails = lazy(() => import("./pages/ProductDetails"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
 
 /* ─── Loading Spinner ─── */
 function LoadingSpinner() {
@@ -70,8 +68,6 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
             {/* 404 fallback */}
             <Route
               path="*"

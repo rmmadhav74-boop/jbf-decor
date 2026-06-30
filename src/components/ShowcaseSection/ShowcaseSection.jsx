@@ -174,7 +174,7 @@ export default function ShowcaseSection() {
 
   return (
     <>
-      <section id="projects" className="py-20 md:py-28 bg-white">
+      <section id="projects" className="py-20 md:py-28 bg-white scroll-mt-32">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Header */}
           <motion.div
@@ -227,16 +227,6 @@ export default function ShowcaseSection() {
           </motion.div>
 
           {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <button className="btn-outline-accent">
-              View All Projects <ArrowRight size={16} />
-            </button>
-          </motion.div>
         </div>
       </section>
 

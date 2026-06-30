@@ -91,7 +91,7 @@ export default function CategorySection() {
   const compact = categories.slice(2);
 
   return (
-    <section className="py-20 bg-light-gray">
+    <section id="design-ideas" className="py-20 bg-light-gray scroll-mt-32">
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
@@ -106,15 +106,6 @@ export default function CategorySection() {
               <span className="block italic text-accent"> Every Space</span>
             </h2>
             <div className="accent-divider mt-2" />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <Link to="/catalog" className="btn-outline-accent">
-              View All Categories <ArrowRight size={16} />
-            </Link>
           </motion.div>
         </div>
 

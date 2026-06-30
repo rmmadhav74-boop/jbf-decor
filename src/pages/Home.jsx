@@ -12,6 +12,8 @@ import VideoSection from "../components/VideoSection/VideoSection";
 import DesignIdeas from "../components/DesignIdeas/DesignIdeas";
 import Awards from "../components/Awards/Awards";
 import FAQ from "../components/FAQ/FAQ";
+import AboutSection from "../components/AboutSection/AboutSection";
+import ContactFormSection from "../components/ContactFormSection/ContactFormSection";
 import CTABanner from "../components/CTA/CTABanner";
 
 
@@ -30,46 +32,64 @@ export default function Home() {
       animate="animate"
       exit="exit"
     >
-      {/* 1 — Hero */}
-      <HeroSlider />
+      {/* ═══ HERO ═══ */}
+      <div id="hero">
+        <HeroSlider />
+      </div>
 
-      {/* 2 — Trust / Stats */}
+      {/* ═══ Trust / Stats ═══ */}
       <TrustBar />
 
-      {/* 3 — Furniture Categories */}
-      <CategorySection />
+      {/* ═══════════════════════════════════════
+         LOWER NAV SECTIONS (come first)
+         Offerings → Design Ideas → Magazine → Projects
+      ═══════════════════════════════════════ */}
 
-      {/* 4 — Featured Collection Slider */}
+      {/* Offerings — Featured Collections */}
       <FeaturedCollection />
 
-      {/* 5 — Why Choose JBF */}
+      {/* Design Ideas — Browse by Room */}
+      <CategorySection />
+
+      {/* Why Choose JBF */}
       <WhyChooseUs />
 
-      {/* 6 — Project Showcase (client portfolio) */}
-      <ShowcaseSection />
-
-      {/* 7 — Testimonials */}
-      <Testimonials />
-
-      {/* 8 — Process */}
-      <Process />
-
-      {/* 9 — Product Collections (tabbed) */}
-      <ProductCollections />
-
-      {/* 10 — Video Section */}
-      <VideoSection />
-
-      {/* 11 — Design Ideas / Blog */}
+      {/* Magazine — Design Inspiration */}
       <DesignIdeas />
 
-      {/* 12 — Awards & Certifications */}
+      {/* Projects — Client Showcase */}
+      <ShowcaseSection />
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* Product Collections (tabbed) */}
+      <ProductCollections />
+
+      {/* Video Section */}
+      <VideoSection />
+
+      {/* ═══════════════════════════════════════
+         UPPER NAV SECTIONS (come after)
+         How it works → Contact Us → Own a franchise
+      ═══════════════════════════════════════ */}
+
+      {/* How it works — About JBF Decor */}
+      <AboutSection />
+
+      {/* Contact Us — How We Work / 5-Step Process */}
+      <Process />
+
+      {/* Awards & Certifications */}
       <Awards />
 
-      {/* 13 — FAQs */}
+      {/* FAQs */}
       <FAQ />
 
-      {/* 14 — CTA Banner */}
+      {/* Own a franchise — Request a Free Quote */}
+      <ContactFormSection />
+
+      {/* CTA Banner */}
       <CTABanner />
     </motion.main>
   );

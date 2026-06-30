@@ -61,7 +61,7 @@ function StepCard({ step, index, total }) {
 /* ─── Section ─── */
 export default function Process() {
   return (
-    <section className="py-24 bg-light-gray relative overflow-hidden">
+    <section id="contact-us" className="py-24 bg-light-gray relative overflow-hidden scroll-mt-32">
       {/* Decorative */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div

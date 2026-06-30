@@ -133,17 +133,7 @@ export default function ProjectGallery() {
           </AnimatePresence>
         </motion.div>
 
-        {/* View All */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <button className="btn-outline-accent">
-            View All Projects <ArrowRight size={16} />
-          </button>
-        </motion.div>
+
       </div>
     </section>
   );
