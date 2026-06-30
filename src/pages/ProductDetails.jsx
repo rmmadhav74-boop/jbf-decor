@@ -213,10 +213,6 @@ export default function ProductDetails() {
                 <Phone size={20} />
               </a>
             </div>
-
-            <button className="w-full btn-outline-accent py-4 text-base justify-center">
-              Request Callback
-            </button>
           </div>
         </div>
 
