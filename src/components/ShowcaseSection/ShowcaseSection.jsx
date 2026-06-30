@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, MapPin, X, ZoomIn } from "lucide-react";
+import { MapPin, X, ZoomIn } from "lucide-react";
 
 const showcaseProjects = [
   {
@@ -63,9 +63,47 @@ const showcaseProjects = [
     image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=1200",
     accent: "#9333ea",
   },
+  {
+    id: "s-07",
+    title: "Scandinavian Studio Apartment",
+    subtitle: "Complete Home Interior",
+    location: "Kochi, Kerala",
+    category: "Full Home",
+    budget: "₹15L",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=1200",
+    accent: "#EB595F",
+  },
+  {
+    id: "s-08",
+    title: "Heritage Villa Restoration",
+    subtitle: "Luxury Renovation",
+    location: "Jaipur, Rajasthan",
+    category: "Full Home",
+    budget: "₹65L+",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+    accent: "#9333ea",
+  },
+  {
+    id: "s-09",
+    title: "Boutique Hotel Lobby",
+    subtitle: "Hospitality Interior",
+    location: "Udaipur, Rajasthan",
+    category: "Commercial",
+    budget: "₹35L",
+    image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&q=80&w=1200",
+    accent: "#EB595F",
+  },
+  {
+    id: "s-10",
+    title: "Penthouse Terrace Garden",
+    subtitle: "Outdoor Living",
+    location: "Noida, Delhi NCR",
+    category: "Outdoor",
+    budget: "₹11L",
+    image: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&q=80&w=1200",
+    accent: "#9333ea",
+  },
 ];
-
-const CATEGORIES = ["All", "Full Home", "Bedroom", "Living Room", "Kitchen", "Office", "Dining"];
 
 /* ── Lightbox ── */
 function Lightbox({ project, onClose }) {
@@ -119,10 +157,9 @@ function Lightbox({ project, onClose }) {
 function ShowcaseCard({ project, index, onView }) {
   return (
     <motion.div
-      layout
       initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
       className="group relative overflow-hidden rounded-2xl bg-gray-100 cursor-pointer shadow-card hover:shadow-card-hover"
       onClick={() => onView(project)}
@@ -167,10 +204,7 @@ function ShowcaseCard({ project, index, onView }) {
 
 /* ── Section ── */
 export default function ShowcaseSection() {
-  const [filter, setFilter] = useState("All");
   const [lightboxProject, setLightboxProject] = useState(null);
-
-  const filtered = filter === "All" ? showcaseProjects : showcaseProjects.filter((p) => p.category === filter);
 
   return (
     <>
@@ -195,38 +229,12 @@ export default function ShowcaseSection() {
             </p>
           </motion.div>
 
-          {/* Filter pills */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-2 mb-10"
-          >
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-250 border ${
-                  filter === cat
-                    ? "bg-accent text-white border-accent shadow-accent"
-                    : "bg-white text-muted-text border-gray-200 hover:border-accent hover:text-accent"
-                }`}
-              >
-                {cat}
-              </button>
+          {/* Grid — no filter, all 10 cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {showcaseProjects.map((project, i) => (
+              <ShowcaseCard key={project.id} project={project} index={i} onView={setLightboxProject} />
             ))}
-          </motion.div>
-
-          {/* Grid */}
-          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            <AnimatePresence mode="popLayout">
-              {filtered.map((project, i) => (
-                <ShowcaseCard key={project.id} project={project} index={i} onView={setLightboxProject} />
-              ))}
-            </AnimatePresence>
-          </motion.div>
-
-          {/* CTA */}
+          </div>
         </div>
       </section>
 

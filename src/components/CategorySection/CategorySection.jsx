@@ -23,7 +23,7 @@ function CategoryCard({ category, index, isFeatured = false }) {
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-500 cursor-pointer"
     >
-      <Link to={`/catalog?cat=${category.slug}`} className="block">
+      <Link to={`/category/${category.slug}`} className="block">
         {/* Image area */}
         <div
           className={`relative overflow-hidden ${
