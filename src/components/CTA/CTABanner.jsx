@@ -53,9 +53,7 @@ export default function CTABanner() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/contact" className="btn-primary text-base px-10 py-4 min-w-[200px] justify-center">
-              Get Free Quote <ArrowRight size={18} />
-            </Link>
+
             <a
               href={generateQuoteLink("I'd like a free home consultation")}
               target="_blank"

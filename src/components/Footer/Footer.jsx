@@ -36,7 +36,7 @@ const footerLinks = {
     { label: "After-Sales Support", href: "#" },
   ],
   "Quick Links": [
-    { label: "Get Free Quote", href: "/contact" },
+
     { label: "EMI Calculator", href: "#" },
     { label: "Find a Showroom", href: "#" },
     { label: "Care Instructions", href: "#" },
